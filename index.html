@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.circliful.css" />
-
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 	
 	<style>
@@ -18,6 +18,9 @@
 		color: #fff;
 		margin:0;
 		padding:40px 0 0 0;
+	}
+	.intro {
+		margin-top: 5%;
 	}
 	.intro p{
 		color: #fff;
@@ -38,38 +41,54 @@
 		margin-top: 4%;
 	}
 	
-	.head {
-		width: 100%;
-		height: 30px;
-		background-color: rgba(253, 248, 248, 0.5);
-		position: fixed;
-		z-index: 999;
-		clear: both;
-		padding: 10px;
-	}
-	.emot {
-		width: 5%;
-		height: 5%;
-	}
+ .head {
+ 	width: 100%;
+ 	height: auto;
+ 	position: fixed;
+ 	top:0;
+ 	background-color: rgba(0,0,0,0.1);
+ 	z-index: 5;
+ 	padding: 5px 10px;
+ }
+.namaweb {
+	font-family: "Potret One";
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.namaweb:hover{
+	color: rgba(255,255,255,1);
+}
 	.line{
 		width: 80%;
 		height: auto;
 		margin: 0 auto;
 		padding: 0 auto;
+		display: inline-block;
 	}
-	.s{
-		width:20%;height: 20%; float: left;
-
+	.line .circle {
+		width: 25%;
+		height: 25%;
+		float: left;
+	}
+	.note {
+		background-color: rgba(249, 249, 249, 0.2);
+		max-width:45%; margin:0 auto;padding:5px; color: white; font-size: 2em;
 	}
 	@media screen and (max-width: 720px){
-		.s{
-			width: 50%;
-			height: 50%;
-		}
+	.line .circle {
+		width: 50%;
+		height: 50%;
+		float: left;
+	}
 		.section h1{
 			margin: 0 10%;
 		}
+		.note{
+			margin-top:10%;
+		}
 	}
+	
 
 	</style>
 
@@ -89,7 +108,6 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
 				sectionsColor: ['#31AD2C', '#5B47B7', '#C2003A'],
 				scrollOverflow: true
 			});
@@ -148,7 +166,9 @@
 </head>
 <body>
 <div class="head">
-	<b>Underconstruction</b>
+	<div class="namaweb">
+		Eday
+	</div>
 </div>
 <div id="fullpage">
 
@@ -167,7 +187,7 @@
 		  </p>
 		</div>
 	</div>
-	<div class="section" id="section1">
+	<div class="section" id="section1" >
 	    <div class="slide" id="slide1">
 			<div class="intro">
 				<h1>About Me</h1>
@@ -190,14 +210,21 @@
 		</div>
 	</div>
 	<div class="section" id="section2">
-		<div class="line" >
-			<div id="html" class="s"></div>
-			<div id="css" class="s"></div>
-			<div id="php" class="s"></div>
-			<div id="javascript" class="s"></div>
+
+		<div class="line" style="margin-top: 10%">
+				<p class="note" style="">
+		 	Skill Newbie
+		</p>
+			<div id="html" class="circle"></div>
+			<div id="css" class="circle"></div>
+			<div id="php" class="circle"></div>
+			<div id="javascript" class="circle"></div>
 		</div>
+
 	</div>
 </div>
-
+	<div style="position: fixed;bottom: 0; right: 0; color:white; background-color: black; padding: 5px;">
+		<b>Underconstruction</b>
+	</div>
 </body>
 </html>
