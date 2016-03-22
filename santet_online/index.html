@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width" initial-scale="1">
+<head>
+<title> Personal </title>
+<!-- <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> -->
+
+	
+	<style>
+	*{
+		padding: 0 auto;
+		margin: 0 auto;
+	}
+ .head {
+ 	width: 100%;
+ 	height: 30px;
+ 	position: fixed;
+ 	top:0;
+ 	background-color: rgba(0,0,0,0.1);
+ 	z-index: 5;
+ 	padding: 5px 10px;
+ }
+.namaweb {
+	font-family: "Potret One";
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.namaweb:hover{
+	color: rgba(255,255,255,1);
+}
+.wrapper{
+	margin-top: 35px;
+	font-size: 20px;
+}
+td{
+	padding: 5px;
+}
+#pesan{
+	text-align: center;
+	background-color: #FE3333;
+	color: #000000;
+	font-weight: bold;
+	max-width:250px;
+}
+
+	@media screen and (max-width: 720px){
+	.wrapper{
+		font-size: 1em;
+	}
+}
+
+	</style>
+
+	<script>
+function cekFile() {
+   var nama = document.forms['s']['nama'].value;
+   var bin = document.forms['s']['bin'].value;
+   var jenis = document.forms['s']['jenis'].value;
+   var a = document.forms['s']['a'].checked;
+   var b = document.forms['s']['b'].checked;
+   var c = document.forms['s']['c'].checked;
+   var d = document.forms['s']['d'].checked;
+   var dll = document.forms['s']['dll'].value;
+   var pesan=document.getElementById("pesan");
+ 
+
+     if( nama=="" || bin==""  ||  dll=="" || jenis=="" || a==false && b==false && c==false&& d==false)
+     {
+        pesan.innerHTML="LENGKAPIN GAN";
+       return false;
+     }else{
+			alert('Santet telah dikirim, jika 1x24 jam tidak ada efek samping hub dukun terdekat');
+			window.location.href="../";
+	 		return false;
+	     }
+}
+</script>
+<body bgcolor="#18CBCD">
+<script>
+	alert('Just for fun');
+</script>	
+<div class="head">
+	<div class="namaweb">
+		Eday
+	</div>
+</div>
+
+<div class="wrapper">
+
+	<h1 align="center">Santet Online</h1> <br>
+	<form action="" method="POST" name="s" onSubmit="return cekFile()">
+	<p id="pesan"></p>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<label for="nama" class=""> Nama target </label>
+				</td>
+				<td>
+					<input type="text" name="nama" class="">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="bin"> Nama Orang tua target
+				</td>
+				<td>
+					<input type="text" name="bin">
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<label for="jenis" >Jenis Kelamin Target </label> 
+				</td>
+				<td >
+					<input type="radio" name="jenis" value="Pria" > Pria <br> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="jenis" value="Wanita">  Wanita <br>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="4">
+					<label for="santet"> Santet</label>
+				</td>
+				<td>
+					<input type="checkbox" name="a" > Muntah Kawat Mati Pelan-Pelan
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="b" > Jomblo Seumur Hidup 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="c" > Setengah Gila
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="d" > Budek Sebelah
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="dll">DLL</label>
+				</td>
+				<td>
+					<textarea name="dll" id="" cols="30" rows="5" maxlength="100"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<button style="width: 100px; height: 30px;" type="submit">
+						Kirim Santet
+					</button>
+				</td>
+			</tr>
+		 </table>
+	</form>
+</div>
+	<div style="position: fixed;bottom: 0; left: 0; color:white; background-color: black; padding: 5px;">
+		<b>Underconstruction</b>
+	</div>
+</body>
+</html>
